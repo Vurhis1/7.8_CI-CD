@@ -1,0 +1,28 @@
+{
+  "name": "7.8ci",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:login": "npx cypress run --browser chrome --parallel --record --key 5073f4e9-410c-484f-89df-a00082538631 --group login --ci-build-id 12 --spec 'cypress/e2e/login.cy.js'",
+    "test:mainTitle": "npx cypress run --browser chrome --parallel --record --key 5073f4e9-410c-484f-89df-a00082538631 --group mainTitle --ci-build-id 12 --spec 'cypress/e2e/mainTitle.cy.js'",
+    "test:movies": "npx cypress run --browser chrome --parallel --record --key 5073f4e9-410c-484f-89df-a00082538631 --group movies --ci-build-id 12 --spec 'cypress/e2e/movies.cy.js'",
+    "test:uiBookingTickets": "npx cypress run --browser chrome --parallel --record --key 5073f4e9-410c-484f-89df-a00082538631 --group uiBookingTickets --ci-build-id 12 --spec 'cypress/e2e/uiBookingTickets.cy.js'",
+    "test:parallel": "run-p -c --aggregate-output test:login test:mainTitle test:movies test:uiBookingTickets",
+    "test:jenkins:login": "npx cypress run --browser chrome --group login --spec 'cypress/e2e/login.cy.js'",
+    "test:jenkins:mainTitle": "npx cypress run --group mainTitle --browser chrome--spec 'cypress/e2e/mainTitle.cy.js'",
+    "test:jenkins:movies": "npx cypress run --group movies --browser chrome --spec 'cypress/e2e/movies.cy.js'",
+    "test:jenkins:uiBookingTickets": "npx cypress run --group uiBookingTickets --browser chrome --spec 'cypress/e2e/uiBookingTickets.cy.js'",
+    "test:jenkins:parallel": "run-p -c --aggregate-output test:login test:mainTitle test:movies"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "cypress": "^12.6.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
