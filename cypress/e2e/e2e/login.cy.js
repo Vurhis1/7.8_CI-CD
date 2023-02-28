@@ -1,5 +1,5 @@
-const loginHappy = require("../fixtures/loginHappy.json");
-const loginSad = require("../fixtures/loginSad.json");
+const loginHappy = require("../../fixtures/loginHappy.json");
+const loginSad = require("../../fixtures/loginSad.json");
 
 describe("login checks in the admin panel", () => {
   loginHappy.forEach((current) => {
