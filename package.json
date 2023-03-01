@@ -24,18 +24,12 @@
     "test:parallel:chrome": "run-p -c --aggregate-output test:login:chrome test:mainTitle:chrome test:movies:chrome test:uiBookingTickets:chrome",
     "test:parallel:edge": "run-p -c --aggregate-output test:login:edge test:mainTitle:edge test:movies:edge test:uiBookingTickets:edge",
     "test:parallel:electron": "run-p -c --aggregate-output test:login:electron test:mainTitle:electron test:movies:electron test:uiBookingTickets:electron",
-    "test:login:chromeParallel": "npx cypress run --record --parallel --group firstStream --ci-build-id 31 --spec 'cypress/e2e/e2e/login.cy.js'",
-    "test:login:edgeParallel": "npx cypress run --record --parallel --group firstStream --ci-build-id 31 --spec 'cypress/e2e/e2e/login.cy.js'",
-    "test:newSpec:chromeParallel": "npx cypress run --record --parallel --group firstStream --ci-build-id 31 --spec 'cypress/e2e/e2e/newSpec.cy.js'",
-    "test:newSpec:edgeParallel": "npx cypress run --record --parallel --group firstStream --ci-build-id 31 --spec 'cypress/e2e/e2e/newSpec.cy.js'",
-    "test:mainTitle:chromeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/mainTitle.cy.js'",
-    "test:mainTitle:edgeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/mainTitle.cy.js'",
-    "test:movies:chromeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/movies.cy.js'",
-    "test:movies:edgeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/movies.cy.js'",
-    "test:uiBookingTickets:chromeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/uiBookingTickets.cy.js'",
-    "test:uiBookingTickets:edgeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/uiBookingTickets.cy.js'",
-    "test:newSpec2:chromeParallel": "npx cypress run --record --group secondStream --parallel --ci-build-id 32 --spec 'cypress/e2e/newSpec2.cy.js'",
-    "test:newSpec2:edgeParallel": "npx cypress run --record --parallel --group secondStream --ci-build-id 32 --spec 'cypress/e2e/newSpec2.cy.js'",
+    "test:login:chromeParallel": "npx cypress run --record --parallel --group login --ci-build-id 5 --spec 'cypress/e2e/e2e/login.cy.js'",
+    "test:newSpec:chromeParallel": "npx cypress run --record --parallel --group newSpec --ci-build-id 5 --spec 'cypress/e2e/e2e/newSpec.cy.js'",
+    "test:mainTitle:edgeParallel": "npx cypress run --record --parallel --group mainTitle --ci-build-id 6 --spec 'cypress/e2e/mainTitle.cy.js'",
+    "test:movies:edgeParallel": "npx cypress run --record --parallel --group movies --ci-build-id 6 --spec 'cypress/e2e/movies.cy.js'",
+    "test:uiBookingTickets:edgeParallel": "npx cypress run --record --parallel --group uiBookingTickets --ci-build-id 6 --spec 'cypress/e2e/uiBookingTickets.cy.js'",
+    "test:newSpec2:edgeParallel": "npx cypress run --record --parallel --group newSpec2 --ci-build-id 6 --spec 'cypress/e2e/newSpec2.cy.js'",
     "test:firstStream:chrome": "run-p -c --aggregate-output test:login:chromeParallel test:newSpec:chromeParallel",
     "test:secondStream:edge": "run-p -c --aggregate-output test:mainTitle:edgeParallel test:movies:edgeParallel test:uiBookingTickets:edgeParallel test:newSpec2:edgeParallel"
   },
@@ -43,7 +37,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.3.7",
+    "chai": "^6.3.7",
     "cypress": "^12.6.0"
   },
   "devDependencies": {
